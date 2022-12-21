@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+$robo: 'Roboto', sans-serif;
+$comic: 'Comic Neue', 'Comic sans ms';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.dark{
+    color: rgba(255, 255, 255, 0.866);
+    background: rgba(#000000, .9);
+}
+
+.light{ 
+    color: rgba(0, 0, 0, 0.866);  
+    background: rgba(#fff, .95);
+}
+
+
+
+
+
+
+
+
+
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $robo;
+
+    #container{
+        position: relative;
+        padding: 1.2rem;
+        padding-bottom: .8rem;
+        margin-top: -9rem;
+        width: 80vw;
+        border-radius: 10px;
+        z-index: 5;
+        overflow: hidden;
+
+        .upper{
+            display: flex;
+            justify-content: space-between;
+
+            .upper-left{
+                display: flex;
+                gap: .5rem;
+                .pic{
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    
+                    #avatar{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+    
+                .names{
+                    position: relative;
+
+                    .displayName{
+                        font-weight: 700;
+
+                        #myName{
+                            padding-right: .1rem;
+                        }
+
+                        #tick{
+                            position: relative;
+                            top: .1rem;
+                            left: -.2rem;
+                            height: 18px;
+                        }
+                    }
+                    .username{
+                        font-size: .8rem;
+                        font-weight: 500;
+                        opacity: .8;
+                    }
+                }
+    
+            }
+
+            .dots{
+                font-size: 2rem;
+                position: relative;
+                top: -1.2rem;
+            }
+        }
+
+        .text{
+            margin-top: .8rem;
+        }
+
+        .bottom{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+
+            .stats{
+                font-size: .9rem;
+                position: relative;
+            }
+            #retweets{
+                opacity: .8;
+            }
+            #retweetsIcon{
+                font-size: 1.25rem;
+                margin-bottom: -.3rem;
+            }
+            #likes{
+                opacity: .8;
+            }
+            #likesIcon{
+                font-size: 1.1rem;
+                opacity: .86;
+                margin-bottom: -.24rem;
+            }
+
+            #comments{
+                position: relative;
+                top: -.38rem;
+                left: -.15rem;
+                opacity: .8;
+            }
+            #commentsIcon{
+                font-size: 1.4rem;
+                opacity: 1;
+                //margin-bottom: -.2rem;
+                filter: brightness(150%);
+            }
+        }
+    }
+
+
+    #copy{
+        position: absolute;
+        bottom: 0;
+        opacity: .1;
+    }
+}
+
+#toTwitter{
+    position: absolute;
+    bottom: 4rem;
+    
+    a{
+        color: rgba(255, 255, 255, 0.714);
+        padding: .5rem;
+        text-decoration: none;
+        font-size: .5rem;
+        background: rgba(#000000, .7);
+        font-style: italic;
+
+        i{
+            opacity: .8;
+        }
+    }
+}
+
+.msg-page{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: url(../images/3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $comic;
+
+    .overlay{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        background: rgba(#000000, .00);
+    }
+
+    .container{
+        position: relative;
+        padding: 1.2rem;
+        margin-top: -9rem;
+        width: 90vw;
+        border-radius: 10px;
+        background: rgba(35, 35, 35, .98);    
+        color: rgba(255, 255, 255, 0.928);
+        opacity: .98;
+
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: .8rem;
+
+            #msg-title{
+                font-size: .8rem;
+            }
+    
+            #now{
+                font-size: .7rem;
+            }
+        }
+    
+        .msg{
+            #sender{
+                font-weight: 700;
+                margin-bottom: .4rem;
+                font-size: 1rem;
+            }
+    
+            #txt{
+                font-size: .8rem;
+                font-weight: 500;
+
+                &::after{
+                    mix-blend-mode: difference;
+                }
+            }
+        }
+    }
+
+
+
+    #copy{
+        position: absolute;
+        bottom: 0;
+        opacity: .1;
+    }
+}
+
+
+#toMessage{
+    position: absolute;
+    bottom: 4rem;
+    
+    a{
+        color: rgba(255, 255, 255, 0.714);
+        padding: .5rem;
+        text-decoration: none;
+        font-size: .5rem;
+        background: rgba(#000000, .7);
+        font-style: italic;
+
+        #iconify{
+            font-size: .8rem;
+            margin-bottom: -.2rem;
+        }
+    }
+}
+
+
+.notification{
+    position: absolute;
+    top: 2rem;
+    background: rgba(51, 51, 51, 0.838);
+    color: rgba(#fff, .85);
+    width: 90vw;
+    border-radius: 5px;
+    padding: .8rem;
+    font-size: .8rem;
+    line-height: 1rem;
+    opacity: 0;
+}
+
+.fade-element {
+    transition: opacity 5s ease-in;
+}
+
+.warning{
+    display: none;
+}
+
+
+@media (min-width: 601px) {
+
+    .warning{
+        z-index: 10;
+        position: absolute;
+        top: 5vh;
+        left: 5vw;
+        display: block;
+        width: 90vw;
+        height: 90vh;
+        border-radius: 20px;
+        background: #333;
+    
+        
+        p{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(19, 231, 0);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2rem;
+            font-weight: 700;
+
+            span{
+                font-size: 1.5rem;
+                padding-left: 30vw;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+  
